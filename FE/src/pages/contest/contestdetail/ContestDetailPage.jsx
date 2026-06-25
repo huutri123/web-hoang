@@ -573,7 +573,13 @@ const ContestDetailPage = () => {
                             {idx === 1 && "🥈"}
                             {idx === 2 && "🥉"}
                           </div>
-                          <div className="top-avatar">{user.avatar}</div>
+                          <div className="top-avatar" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            {user.avatar && user.avatar.startsWith('http') ? (
+                              <img src={user.avatar} alt="avatar" style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover' }} />
+                            ) : (
+                              user.avatar || '🧑‍🎓'
+                            )}
+                          </div>
                           <div className="top-name">{user.name}</div>
                           <div className="top-score">{user.score} điểm</div>
                           {idx !== 0 && <div className="top-time">{user.time}</div>}
@@ -600,8 +606,12 @@ const ContestDetailPage = () => {
                               </span>
                             </div>
                             <div className="cd-col-user">
-                              <span className="user-avatar-small">
-                                {user.avatar}
+                              <span className="user-avatar-small" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', verticalAlign: 'middle' }}>
+                                {user.avatar && user.avatar.startsWith('http') ? (
+                                  <img src={user.avatar} alt="avatar" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
+                                ) : (
+                                  user.avatar || '🧑‍🎓'
+                                )}
                               </span>
                               <span className="user-name-small">
                                 {user.name}

@@ -105,7 +105,7 @@ class User(Base):
     password = Column(String(100), nullable=False)  # Mật khẩu tài khoản (mã hóa)
     role = Column(String(20), default="user")  # Quyền hạn tài khoản (ví dụ: admin, user)
     points = Column(Integer, default=0)  # Điểm tích lũy học tập của thành viên
-    avatar = Column(String(255), default="🧑‍🎓")  # Đường dẫn ảnh đại diện của thành viên
+    avatar = Column(String(255), default="http://localhost:8000/upload/avatar/default_avatar.png")  # Đường dẫn ảnh đại diện của thành viên
     fullname = Column(String(100), nullable=True)  # Tên đầy đủ học viên
     status = Column(String(20), default="Hoạt động")  # Trạng thái hoạt động
     contest_banned = Column(Integer, default=0)  # Trạng thái cấm thi đấu (0: bình thường, 1: bị cấm)

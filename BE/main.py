@@ -114,7 +114,7 @@ async def register(user_data: dict):
             password=user_data.get("password"),
             role=role,
             points=0,
-            avatar="🧑‍🎓"
+            avatar="http://localhost:8000/upload/avatar/default_avatar.png"
         )
         db.add(new_user)
         db.commit()
