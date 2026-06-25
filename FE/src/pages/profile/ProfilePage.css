@@ -1,0 +1,152 @@
+/* ══ ProfilePage.css ══ */
+
+.profile-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  min-height: 70vh;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* ── Sidebar ── */
+.profile-sidebar {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.profile-user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 24px;
+  border-bottom: 1.5px solid #F3F4F6;
+  margin-bottom: 20px;
+}
+
+.profile-avatar-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #E5E7EB;
+  color: #374151;
+  font-size: 36px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border: 4px solid #F3F4F6;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.profile-user-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.profile-user-email {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0;
+  word-break: break-all;
+}
+
+/* ── Sidebar Menu ── */
+.profile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.profile-menu-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4B5563;
+  transition: color 0.2s;
+}
+
+.profile-menu-item-icon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.profile-menu-chevron {
+  font-size: 12px;
+  color: #9CA3AF;
+  transition: transform 0.2s, color 0.2s;
+}
+
+/* Hover State */
+.profile-menu-item:hover {
+  background: #F3F4F6;
+}
+
+.profile-menu-item:hover .profile-menu-item-left {
+  color: #1F2937;
+}
+
+.profile-menu-item:hover .profile-menu-chevron {
+  color: #6B7280;
+  transform: translateX(2px);
+}
+
+/* Active State */
+.profile-menu-item.active {
+  background: #174A84; /* Xanh dương đậm như trong ảnh */
+}
+
+.profile-menu-item.active .profile-menu-item-left {
+  color: white;
+}
+
+.profile-menu-item.active .profile-menu-chevron {
+  color: rgba(255, 255, 255, 0.7);
+  transform: translateX(4px);
+}
+
+/* ── Content Card ── */
+.profile-content-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  min-height: 500px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}

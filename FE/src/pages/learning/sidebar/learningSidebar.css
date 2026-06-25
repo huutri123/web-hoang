@@ -1,0 +1,224 @@
+/* ============================================================
+   LEFT SIDEBAR (Syllabus)
+   ============================================================ */
+.learning-sidebar {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.learning-sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.learning-course-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.4;
+  margin: 0 0 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.learning-progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.learning-progress-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4B5563;
+}
+
+.learning-progress-bar-bg {
+  height: 6px;
+  background: #E5E7EB;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.learning-progress-bar-fill {
+  height: 100%;
+  background: #10B981;
+  border-radius: 3px;
+  transition: width 0.4s ease-in-out;
+}
+
+.learning-chapters-list {
+  overflow-y: auto;
+  flex: 1;
+  max-height: 560px;
+}
+
+/* Chapter Accordion */
+.learning-chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #F9FAFB;
+  border-bottom: 1px solid #E5E7EB;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.learning-chapter-header:hover {
+  background: #F3F4F6;
+}
+
+.learning-chapter-header.active {
+  background: #EFF6FF;
+}
+
+.learning-chapter-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  padding-right: 8px;
+}
+
+.learning-chapter-toggle-icon {
+  font-size: 11px;
+  color: #6B7280;
+}
+
+/* Lessons inside Chapter */
+.learning-lessons-list {
+  background: white;
+}
+
+.learning-lesson-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #F3F4F6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.learning-lesson-item:hover:not(.locked) {
+  background: #F9FAFB;
+}
+
+.learning-lesson-item.active {
+  background: rgba(23, 74, 132, 0.08);
+  border-left: 4px solid #174A84;
+  padding-left: 16px;
+}
+
+.learning-lesson-item.locked {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.learning-lesson-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.learning-lesson-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9CA3AF;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.learning-active-dot {
+  width: 8px;
+  height: 8px;
+  background: #174A84;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(23, 74, 132, 0.4);
+}
+
+.learning-play-icon {
+  color: #9CA3AF;
+}
+
+.learning-lesson-item.active .learning-lesson-title {
+  color: #174A84;
+  font-weight: 700;
+}
+
+.learning-lesson-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.learning-lesson-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4B5563;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.learning-lesson-duration {
+  font-size: 11px;
+  color: #9CA3AF;
+  margin-top: 2px;
+}
+
+.learning-completed-check {
+  color: #10B981;
+  font-size: 14px;
+}
+
+.learning-lock-icon {
+  color: #D1D5DB;
+  font-size: 12px;
+}
+
+.learning-sidebar-footer {
+  padding: 16px 20px;
+  border-top: 1px solid #F3F4F6;
+  background: white;
+}
+
+.learning-download-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid #D1D5DB;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #174A84;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.learning-download-btn:hover {
+  background: #F3F4F6;
+  border-color: #174A84;
+}
+
+.learning-download-icon {
+  font-size: 14px;
+}

@@ -1,0 +1,167 @@
+/* ── Learning Classroom Stylesheet ── */
+
+.learning-page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  background-color: #F9FAFB;
+  min-height: calc(100vh - 80px);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 3 Columns Layout */
+.learning-page-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr 320px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* ============================================================
+   UNAUTHENTICATED & LOADING SCREEN STYLING
+   ============================================================ */
+.learning-page-unauth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background-color: #F9FAFB;
+  min-height: calc(100vh - 120px);
+}
+
+.learning-unauth-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.learning-unauth-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.learning-unauth-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 10px;
+}
+
+.learning-unauth-card p {
+  color: #6B7280;
+  font-size: 14px;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+.learning-unauth-login-btn {
+  background: #174A84;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.learning-unauth-login-btn:hover {
+  background: #123B6A;
+}
+
+/* LOADING & ERROR SCREENS */
+.learning-loading-screen,
+.learning-error-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.learning-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #E5E7EB;
+  border-top-color: #174A84;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.learning-loading-screen p {
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.error-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.learning-error-screen h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px;
+}
+
+.learning-error-screen p {
+  color: #6B7280;
+  font-size: 13.5px;
+  margin: 0 0 20px;
+}
+
+.error-back-btn {
+  background: white;
+  border: 1px solid #174A84;
+  color: #174A84;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.error-back-btn:hover {
+  background: rgba(23, 74, 132, 0.08);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 1200px) {
+  .learning-page-layout {
+    grid-template-columns: 280px 1fr;
+  }
+  .learning-exercises-sidebar {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .learning-page-layout {
+    grid-template-columns: 1fr;
+  }
+  .learning-exercises-sidebar {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+  .learning-sidebar {
+    max-height: 400px;
+  }
+}

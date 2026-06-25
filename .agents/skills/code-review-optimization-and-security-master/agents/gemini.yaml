@@ -1,0 +1,7 @@
+interface:
+  display_name: "code review optimization and security master (Gemini)"
+
+policy:
+  products:
+    - "gemini"
+  allow_implicit_invocation: true

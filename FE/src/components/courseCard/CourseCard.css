@@ -1,0 +1,131 @@
+/* ============================================================
+   COURSECARD.CSS - Style dùng chung cho component CourseCard
+   Được dùng ở: HomePage, AllCoursePage, và bất kỳ trang nào khác
+   ============================================================ */
+
+.course-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #E5E7EB;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.course-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* ── Ảnh nền thumbnail ── */
+.course-card-thumb {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Nội dung thông tin ── */
+.course-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-card-title {
+  font-weight: 700;
+  font-size: 17px;
+  color: #111827;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s;
+}
+
+.course-card:hover .course-card-title {
+  color: #2563EB;
+}
+
+.course-card-desc {
+  font-size: 13px;
+  color: #6B7280;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Giá + Đánh giá ── */
+.course-card-pricing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.course-card-price {
+  font-size: 20px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.course-card-price-old {
+  font-size: 13px;
+  color: #9CA3AF;
+  text-decoration: line-through;
+  margin-right: auto;
+}
+
+.course-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.course-card-star { font-size: 14px; }
+
+.course-card-rating-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* ── Nút hành động ── */
+.course-card-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background-color: #2563EB;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transition: background-color 0.2s, transform 0.15s;
+  margin-top: auto;
+}
+
+.course-card-btn:hover {
+  background-color: #1D4ED8;
+  transform: translateY(-1px);
+}
+
+/* Wrapper link - không có gạch chân */
+.course-card-btn-link {
+  text-decoration: none;
+  display: block;
+}

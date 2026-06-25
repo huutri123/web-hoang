@@ -1,0 +1,109 @@
+/* src/components/CodeEditor.css */
+.code-editor {
+  display: flex;
+  height: 100%;
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+}
+
+.line-numbers {
+  background: #1e1e1e;
+  color: #858585;
+  padding: 12px 8px;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid #3c3c3c;
+  min-width: 40px;
+}
+
+.line-number {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.editor-wrapper {
+  flex: 1;
+  position: relative;
+  background: #1e1e1e;
+}
+
+.highlight-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  color: transparent;
+  background: transparent;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  pointer-events: none;
+  overflow: auto;
+}
+
+.highlight-layer .keyword {
+  color: #569cd6;
+  font-weight: bold;
+}
+
+.highlight-layer .string {
+  color: #ce9178;
+}
+
+.highlight-layer .comment {
+  color: #6a9955;
+}
+
+.highlight-layer .function {
+  color: #dcdcaa;
+}
+
+.code-input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d4d4d4;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto;
+  z-index: 1;
+}
+
+.code-input::selection {
+  background: #264f78;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .code-editor {
+    font-size: 12px;
+  }
+
+  .line-numbers {
+    min-width: 30px;
+    padding: 8px 4px;
+  }
+
+  .highlight-layer,
+  .code-input {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

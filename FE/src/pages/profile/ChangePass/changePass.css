@@ -1,0 +1,130 @@
+/* ── Change Password Component ── */
+.cp-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cp-header {
+  margin-bottom: 24px;
+  border-bottom: 1.5px solid #F3F4F6;
+  padding-bottom: 16px;
+}
+
+.cp-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 6px;
+}
+
+.cp-subtitle {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.cp-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.cp-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cp-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.cp-input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1F2937;
+  background: white;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.cp-input:focus {
+  border-color: #174A84;
+  box-shadow: 0 0 0 3px rgba(23, 74, 132, 0.15);
+}
+
+.cp-submit-row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cp-submit-btn {
+  background: #174A84;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(23, 74, 132, 0.2);
+}
+
+.cp-submit-btn:hover {
+  background: #113864;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 10px -1px rgba(23, 74, 132, 0.3);
+}
+
+.cp-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Toast */
+.cp-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: #10B981;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+  animation: cpFadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  z-index: 9999;
+}
+
+.cp-toast-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+@keyframes cpFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,439 @@
+/* pages/ContestsPage.css */
+
+.contests-page {
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+/* Header */
+.contests-header {
+  text-align: left;
+  padding: 60px 180px 40px; /* Tăng tiếp lên 180px */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #111827; /* Chuyển màu chữ sang tối để dễ đọc trên nền sáng */
+  min-height: 400px; /* Trả về 400px theo yêu cầu */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Chuyển từ center lên đầu khung */
+  padding-top: 70px; /* Điều chỉnh lại vị trí chính xác từ mép trên */
+  position: relative;
+}
+
+/* Breadcrumb */
+.contests-breadcrumb {
+  position: absolute;
+  top: 24px;
+  left: 180px; /* Đồng bộ dịch sang phải 180px */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px; /* Tăng lên 1 size đồng bộ với trang Khóa học */
+  color: #64748b;
+}
+
+.contests-breadcrumb a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contests-breadcrumb a:hover {
+  color: #0052ff;
+}
+
+.breadcrumb-sep {
+  color: #cbd5e1;
+}
+
+.contests-header h1 {
+  font-size: 56px;
+  margin-bottom: 24px;
+  font-weight: 800;
+  color: #1a202c;
+}
+
+.text-blue {
+  color: #0052FF;
+}
+
+.contests-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 82, 255, 0.08);
+  color: #0052FF;
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.contests-header p {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Filter + Search Bar */
+.contests-filter-bar {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contests-filter-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Search Bar */
+.contests-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px 16px;
+  min-width: 300px;
+  transition: all 0.2s;
+}
+
+.contests-search:focus-within {
+  border-color: #0052ff;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(0, 82, 255, 0.1);
+}
+
+.search-icon {
+  color: #9ca3af;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #1f2937;
+  width: 100%;
+}
+
+/* Filter tabs */
+.filter-tabs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.filter-btn {
+  padding: 10px 22px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: white;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: rgba(0, 82, 255, 0.05); /* Nền xanh nhạt */
+  border-color: #0052ff; /* Viền xanh */
+  color: #0052ff; /* Chữ xanh */
+}
+
+.filter-btn.active {
+  background: #0052ff;
+  color: white;
+  border-color: #0052ff;
+  box-shadow: 0 4px 12px rgba(0, 82, 255, 0.25);
+}
+
+/* Contest Grid */
+.contests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 28px;
+  padding: 48px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Contest Card - Thiết kế mới với nền xám nhẹ */
+.contest-card {
+  background: #f8f9fa; /* Nền xám nhẹ */
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e9ecef;
+}
+
+.contest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
+  border-color: #dee2e6;
+}
+
+/* Card Header - Phần trên đậm hơn */
+.contest-card-header {
+  padding: 24px 24px 20px;
+  background: linear-gradient(135deg, #2d3748, #1a202c); /* Nền đậm */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.contest-icon {
+  font-size: 56px;
+  background: rgba(255, 255, 255, 0.15);
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.contest-status {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: white;
+}
+
+.status-upcoming {
+  background: rgba(251, 191, 36, 0.9);
+  color: #1e293b;
+}
+
+.status-ongoing {
+  background: rgba(16, 185, 129, 0.9);
+  color: white;
+}
+
+.status-ended {
+  background: rgba(100, 116, 139, 0.9);
+  color: white;
+}
+
+/* Card Body */
+.contest-card-body {
+  padding: 24px;
+  background: #ffffff;
+}
+
+.contest-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.contest-description {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+/* Contest Meta */
+.contest-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 12px 0;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #475569;
+  background: #f8f9fa;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.meta-item span:first-child {
+  font-size: 14px;
+}
+
+/* Contest Footer */
+.contest-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.contest-prize {
+  color: #f59e0b;
+  font-weight: 700;
+  font-size: 15px;
+  background: #fef3c7;
+  padding: 6px 14px;
+  border-radius: 30px;
+}
+
+.view-detail-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+
+.view-detail-btn:hover {
+  background: #667eea10;
+  transform: translateX(4px);
+}
+
+/* Loading state */
+.loading-contests {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty state */
+.no-contests {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 24px;
+}
+
+.no-contests-icon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.no-contests p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contests-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    padding: 32px 24px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contests-header h1 {
+    font-size: 32px;
+  }
+
+  .contests-header p {
+    font-size: 14px;
+  }
+
+  .filter-tabs {
+    gap: 8px;
+    padding: 20px 16px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .contests-grid {
+    grid-template-columns: 1fr;
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  .contest-card-header {
+    padding: 20px;
+  }
+
+  .contest-icon {
+    font-size: 44px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .contest-card-body {
+    padding: 20px;
+  }
+
+  .contest-title {
+    font-size: 18px;
+  }
+
+  .contest-meta {
+    gap: 10px;
+  }
+
+  .meta-item {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .contest-prize {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .view-detail-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

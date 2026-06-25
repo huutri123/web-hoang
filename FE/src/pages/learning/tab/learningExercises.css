@@ -1,0 +1,234 @@
+/* ============================================================
+   RIGHT SIDEBAR (Exercises & Chapter Progress)
+   ============================================================ */
+.learning-exercises-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exercises-section {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.exercises-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 16px;
+}
+
+.exercise-title-icon {
+  color: #174A84;
+}
+
+.exercises-loading {
+  font-size: 13px;
+  color: #6B7280;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.exercises-empty-box {
+  background: #F9FAFB;
+  border: 1px dashed #D1D5DB;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  color: #6B7280;
+  font-size: 13px;
+}
+
+.exercises-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.exercise-card {
+  border: 1px solid #F3F4F6;
+  border-radius: 12px;
+  padding: 16px;
+  background: #FAFAFA;
+}
+
+.exercise-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.exercise-index {
+  font-size: 13px;
+  font-weight: 750;
+  color: #111827;
+}
+
+.exercise-question {
+  font-size: 13px;
+  color: #4B5563;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.exercise-textarea {
+  width: 100%;
+  height: 90px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Fira Code', monospace;
+  color: #1F2937;
+  resize: vertical;
+  outline: none;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.exercise-textarea:focus {
+  border-color: #174A84;
+}
+
+.exercise-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.exercise-submit-btn {
+  background: #00B57C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.exercise-submit-btn:hover {
+  background: #009667;
+}
+
+.exercise-submit-btn.submitted {
+  background: #174A84;
+}
+
+.exercise-submit-btn.submitted:hover {
+  background: #123B6A;
+}
+
+.exercise-guide-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #174A84;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.exercise-guide-toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* Solution Guide Dropdown */
+.exercise-guide-content {
+  margin-top: 12px;
+  background: rgba(23, 74, 132, 0.05);
+  border: 1px solid rgba(23, 74, 132, 0.1);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.guide-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #174A84;
+  margin-bottom: 6px;
+}
+
+.guide-body-code {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  color: #1F2937;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+/* BOTTOM PROGRESS WIDGET */
+.chapter-progress-section {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.chapter-progress-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 10px;
+}
+
+.chapter-progress-status-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #4B5563;
+  margin-bottom: 8px;
+}
+
+.chapter-progress-pct {
+  font-weight: 700;
+  color: #10B981;
+}
+
+.chapter-progress-bar-bg {
+  height: 6px;
+  background: #E5E7EB;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.chapter-progress-bar-fill {
+  height: 100%;
+  background: #10B981;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.chapter-review-btn {
+  width: 100%;
+  background: white;
+  border: 1px solid #174A84;
+  color: #174A84;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chapter-review-btn:hover {
+  background: rgba(23, 74, 132, 0.08);
+}

@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+FE/node_modules/
+FE/build/
+FE/dist/
+FE/.env.local
+FE/.env.development.local
+FE/.env.test.local
+FE/.env.production.local
+
+# Python / Backend
+BE/__pycache__/
+BE/*.py[cod]
+BE/*$py.class
+BE/.venv/
+BE/venv/
+BE/ENV/
+BE/env/
+BE/.pytest_cache/
+BE/upload/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.sln
+*.user
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
