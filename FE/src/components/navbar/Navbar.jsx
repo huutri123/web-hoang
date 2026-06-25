@@ -99,11 +99,7 @@ const Navbar = () => {
                     </span>
                   </div>
                   <div className="navbar-avatar">
-                    {user.avatar && user.avatar.startsWith('http') ? (
-                      <img src={user.avatar} alt="avatar" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
-                    ) : (
-                      user.avatar || '🧑‍🎓'
-                    )}
+                    {user.avatar || '🧑‍🎓'}
                   </div>
                   {/* Mũi tên trạng thái mở/đóng */}
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
@@ -119,11 +115,7 @@ const Navbar = () => {
                     <div className="navbar-dropdown-header">
                       <div className="navbar-dropdown-user">
                         <div className="navbar-dropdown-avatar">
-                          {user.avatar && user.avatar.startsWith('http') ? (
-                            <img src={user.avatar} alt="avatar" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
-                          ) : (
-                            user.avatar || '🧑‍🎓'
-                          )}
+                          {user.avatar || '🧑‍🎓'}
                         </div>
                         <div className="navbar-dropdown-info">
                           <span className="navbar-dropdown-name">{user.name}</span>

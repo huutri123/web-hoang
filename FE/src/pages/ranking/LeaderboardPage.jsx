@@ -217,11 +217,7 @@ const LeaderboardPage = () => {
                             <td className="col-rank">{renderRankBadge(row.rank)}</td>
                             <td className="col-user">
                               <div className="user-avatar-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px' }}>
-                                {row.avatar && row.avatar.startsWith('http') ? (
-                                  <img src={row.avatar} alt="avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                ) : (
-                                  row.avatar || '🧑‍🎓'
-                                )}
+                                {row.avatar || '🧑‍🎓'}
                               </div>
                               <div className="user-info-text">
                                 <strong>{row.name} {user && row.email === user.email && <span style={{ color: '#3b82f6', fontSize: '12px' }}>(Bạn)</span>}</strong>

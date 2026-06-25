@@ -470,11 +470,7 @@ function LeaderboardWidget() {
               <div className="lb-item-left">
                 <span className="lb-rank">{u.rank}</span>
                 <div className="lb-avatar" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', width: '32px', height: '32px' }}>
-                  {u.avatar && u.avatar.startsWith('http') ? (
-                    <img src={u.avatar} alt="avatar" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
-                  ) : (
-                    u.avatar || '🧑‍🎓'
-                  )}
+                  {u.avatar || '🧑‍🎓'}
                 </div>
                 <div>
                   <p className="lb-name">{u.name} {user && u.email === user.email && <span style={{ color: '#3b82f6', fontSize: '10px' }}>(Bạn)</span>}</p>
@@ -497,11 +493,7 @@ function LeaderboardWidget() {
               <div className="lb-item-left">
                 <span className="lb-rank">{currentUserEntry.rank}</span>
                 <span className="lb-me-avatar" style={{ fontSize: '20px' }}>
-                  {currentUserEntry.avatar && currentUserEntry.avatar.startsWith('http') ? (
-                    <img src={currentUserEntry.avatar} alt="avatar" style={{ width: '20px', height: '20px', borderRadius: '50%', objectFit: 'cover' }} />
-                  ) : (
-                    currentUserEntry.avatar || '👋'
-                  )}
+                  {currentUserEntry.avatar || '👋'}
                 </span>
                 <span className="lb-me-name">Bạn</span>
               </div>
