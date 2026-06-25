@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
       id: userData.id || Date.now(),
       email: userData.email,
       name: userData.username || userData.name,
-      avatar: userData.avatar || 'http://localhost:8000/upload/avatar/default_avatar.png',
+      avatar: userData.avatar || '🧑‍🎓',
       role: userData.role || 'user',
       points: userData.points || 0,
     };

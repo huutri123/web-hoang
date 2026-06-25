@@ -196,7 +196,7 @@ def get_global_leaderboard(period: str = "all", db: Session = Depends(get_db)):
             leaderboard_candidates.append({
                 "email": email,
                 "name": user.fullname or user.username or "Ẩn danh",
-                "avatar": user.avatar or "http://localhost:8000/upload/avatar/default_avatar.png",
+                "avatar": user.avatar or "🧑‍🎓",
                 "level": level,
                 "school": user.address or "Thành viên EduPro",
                 "points": global_score,
@@ -708,7 +708,7 @@ def get_contest_leaderboard(contest_id: int, db: Session = Depends(get_db)):
 
             leaderboard_candidates.append({
                 "name": user.fullname or user.username or "Ẩn danh",
-                "avatar": user.avatar or "http://localhost:8000/upload/avatar/default_avatar.png",
+                "avatar": user.avatar or "🧑‍🎓",
                 "score": total_score,
                 "time": latest_submit_time,
             })
